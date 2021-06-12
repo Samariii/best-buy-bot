@@ -1,5 +1,6 @@
 # Importing selenium webdriver and selenium wait
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -8,7 +9,7 @@ import json
 
 # Grab the webdriver from the local filesystem
 # Load the json to grab details
-browser = webdriver.Chrome('chromedriver.exe')
+browser = webdriver.Chrome(ChromeDriverManager().install())
 j = open('details.json')
 data = json.load(j)
 
