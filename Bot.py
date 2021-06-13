@@ -27,7 +27,7 @@ while not completeOrder:
 		)
 	except:
 		browser.refresh()
-        print("Bot is working..")
+		print("Bot is working..")
 		continue
 
 	print("Got the add to cart button")
